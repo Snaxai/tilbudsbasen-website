@@ -18,14 +18,14 @@ export default function NavBar() {
             : "bg-white/0"
         } z-30 transition-all`}
       >
-        <div className="mx-5 flex h-16 w-full max-w-screen-xl items-center justify-between">
+        <div className="mx-5 flex h-16 w-full max-w-(--breakpoint-xl) items-center justify-between">
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
               src="/logo.png"
               alt="Precedent logo"
               width="30"
               height="30"
-              className="mr-2 rounded-sm"
+              className="mr-2 rounded-xs"
             ></Image>
             <p>Precedent</p>
           </Link>
