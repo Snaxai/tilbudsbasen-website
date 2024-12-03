@@ -29,7 +29,7 @@ export default function NavBar() {
             ></Image>
             <p>Precedent</p>
           </Link>
-          <SignedOut>
+        {/*  <SignedOut>
             <SignInButton mode="modal">
               <button className="rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-colors hover:bg-white hover:text-black">
                 Sign In
@@ -46,7 +46,7 @@ export default function NavBar() {
                 />
               </UserButton.MenuItems>
             </UserButton>
-          </SignedIn>
+          </SignedIn>*/}
         </div>
       </div>
     </>

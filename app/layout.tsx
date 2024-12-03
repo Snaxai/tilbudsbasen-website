@@ -4,7 +4,7 @@ import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import Navbar from "@/components/layout/navbar";
-import { ClerkProvider } from "@clerk/nextjs";
+//import { ClerkProvider } from "@clerk/nextjs";
 import clsx from "clsx";
 
 export const metadata = {
@@ -20,20 +20,18 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={clsx(sfPro.variable, inter.variable)}>
-          <div className="bg-linear-to-br fixed h-screen w-full from-indigo-50 via-white to-cyan-100" />
-          <Suspense fallback="...">
-            <Navbar />
-          </Suspense>
-          <main className="flex min-h-screen w-full flex-col items-center justify-center py-32">
-            {children}
-          </main>
-          <Footer />
-          <VercelAnalytics />
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body className={clsx(sfPro.variable, inter.variable)}>
+        <div className="bg-linear-to-br fixed h-screen w-full from-indigo-50 via-white to-cyan-100" />
+        <Suspense fallback="...">
+          <Navbar />
+        </Suspense>
+        <main className="flex min-h-screen w-full flex-col items-center justify-center py-32">
+          {children}
+        </main>
+        <Footer />
+        <VercelAnalytics />
+      </body>
+    </html>
   );
 }
