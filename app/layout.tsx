@@ -1,11 +1,11 @@
 import "./globals.css";
-import cx from "classnames";
 import { sfPro, inter } from "./fonts";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import Navbar from "@/components/layout/navbar";
 import { ClerkProvider } from "@clerk/nextjs";
+import clsx from "clsx";
 
 export const metadata = {
   title: "Precedent - Building blocks for your Next.js project",
@@ -22,8 +22,8 @@ export default async function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={cx(sfPro.variable, inter.variable)}>
-          <div className="fixed h-screen w-full bg-linear-to-br from-indigo-50 via-white to-cyan-100" />
+        <body className={clsx(sfPro.variable, inter.variable)}>
+          <div className="bg-linear-to-br fixed h-screen w-full from-indigo-50 via-white to-cyan-100" />
           <Suspense fallback="...">
             <Navbar />
           </Suspense>
